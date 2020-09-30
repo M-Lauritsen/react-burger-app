@@ -7,15 +7,22 @@ import Aux from '../../hoc/Auxi';
 
 class Layout extends Component {
   state = {
-    showSideDrawer: true,
+    showSideDrawer: false,
   };
   sideDrawerClosedHandler = () => {
     this.setState({ showSideDrawer: false });
   };
+
+  sideDrawerToggleHandler = () => {
+    this.setState(prevState => {
+      return { showSideDrawer: !prevState.showSideDrawer };
+    });
+  };
+  
   render() {
     return (
       <Aux>
-        <Toolbar />
+        <Toolbar drawerToogleClicked={this.sideDrawerToggleHandler} />
         <Sidedrawer
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler}
