@@ -3,7 +3,9 @@ import classes from './Modal.module.css';
 import Aux from '../../../hoc/Auxi';
 import Backdrop from '../Backdrop/Backdrop';
 
+//Changed to class for optimization
 class Modal extends Component {
+  //Component wont trigger untill "order now" is pressed
   shouldComponentUpdate(nextProps, nextState) {
     return nextProps.show !== this.props.show;
   }
