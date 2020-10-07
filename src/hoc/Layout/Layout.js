@@ -3,7 +3,7 @@ import classes from './Layout.module.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toobar';
 import Sidedrawer from '../../components/Navigation/Sidedrawer/Sidedrawer';
 
-import Aux from '../../hoc/Auxi';
+import Aux from '../Auxi/Auxi';
 
 class Layout extends Component {
   state = {
